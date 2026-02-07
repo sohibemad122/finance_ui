@@ -1,4 +1,5 @@
 import 'package:finance_ui/core/routing/routes.dart';
+import 'package:finance_ui/feature/forgotPass/ui/forgot_pass.dart';
 import 'package:finance_ui/feature/login/ui/login_page.dart';
 import 'package:finance_ui/feature/register/ui/register_page.dart';
 import 'package:finance_ui/feature/welcome/ui/welcome_page.dart';
@@ -15,6 +16,9 @@ class AppRouter {
 
       case Routes.registerPage:
         return MaterialPageRoute(builder: (_) => const RegisterPage());
+
+      case Routes.forgotPassPage:
+        return MaterialPageRoute(builder: (_) => const ForgotPass());
 
       default:
         return null;

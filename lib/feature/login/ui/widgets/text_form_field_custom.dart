@@ -1,4 +1,6 @@
+import 'package:finance_ui/core/helpers/extension.dart';
 import 'package:finance_ui/core/helpers/spacing.dart';
+import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/core/theme/text_style.dart';
 import 'package:finance_ui/core/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -23,9 +25,9 @@ class TextFormFieldCustom extends StatelessWidget {
           verticalSpace(15),
           Row(
             children: [
-              const Spacer(),
+              Spacer(),
               GestureDetector(
-                onTap: () {},
+                onTap: () => context.pushNamed(Routes.forgotPassPage),
                 child: Text(
                   'Forgot password?',
                   style: TextStyles.font14DarkGraySemiBold,
