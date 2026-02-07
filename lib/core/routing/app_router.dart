@@ -1,0 +1,19 @@
+import 'package:finance_ui/core/routing/routes.dart';
+import 'package:finance_ui/feature/login/ui/login_page.dart';
+import 'package:finance_ui/feature/welcome/ui/welcome_page.dart';
+import 'package:flutter/material.dart';
+
+class AppRouter {
+  Route? generateRoute(RouteSettings setting) {
+    switch (setting.name) {
+      case Routes.welcomePage:
+        return MaterialPageRoute(builder: (_) => const WelcomePage());
+
+      case Routes.loginPage:
+        return MaterialPageRoute(builder: (_) => const LoginPage());
+
+      default:
+        return null;
+    }
+  }
+}
