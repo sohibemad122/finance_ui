@@ -13,21 +13,25 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-      body: Column(
-        children: [
-          Image.asset(
-            'assets/images/generated.png',
-            fit: BoxFit.fitWidth,
-            width: double.infinity,
-            height: 570.h,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/images/generated.png',
+                fit: BoxFit.fill,
+                width: double.infinity,
+                height: 570.h,
+              ),
+              verticalSpace(21),
+              const LoginButton(),
+              verticalSpace(21),
+              const RegisterButton(),
+              verticalSpace(30),
+              const ContinueAsAGuest(),
+            ],
           ),
-          verticalSpace(21),
-          const LoginButton(),
-          verticalSpace(21),
-          const RegisterButton(),
-          verticalSpace(30),
-          const ContinueAsAGuest(),
-        ],
+        ),
       ),
     );
   }

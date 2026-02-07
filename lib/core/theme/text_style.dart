@@ -32,6 +32,12 @@ static TextStyle font17DarkBold = TextStyle(
     color: AppColors.mainAppColor,
     fontWeight: FontWeightHelper.bold,
   );
+static TextStyle font15DarkBlueBold = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 15.sp,
+    color: AppColors.darkBlue,
+    fontWeight: FontWeightHelper.bold,
+  );
 
   static TextStyle font15GrayBold = TextStyle(
     fontFamily: AppFonts.mainFontName,
@@ -45,5 +51,11 @@ static TextStyle font17DarkBold = TextStyle(
     fontSize: 14.sp,
     color: AppColors.darkGray,
     fontWeight: FontWeightHelper.semibold,
+  );
+   static TextStyle font15GmainAppColormedium = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 15.sp,
+    color: AppColors.mainAppColor,
+    fontWeight: FontWeightHelper.medium,
   );
 }

@@ -33,40 +33,37 @@ class AppTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: TextButton(
-        style: ButtonStyle(
-          // ignore: deprecated_member_use
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? 8),
-              side: BorderSide(
-                color: borderColor ?? Colors.transparent,
-                width: borderWidth ?? 1,
-              ),
+    return TextButton(
+      style: ButtonStyle(
+        // ignore: deprecated_member_use
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius ?? 8),
+            side: BorderSide(
+              color: borderColor ?? Colors.transparent,
+              width: borderWidth ?? 1,
             ),
-          ),
-          // ignore: deprecated_member_use
-          backgroundColor: MaterialStatePropertyAll(
-            backgroundColor ?? AppColors.mainAppColor,
-          ),
-
-          // ignore: deprecated_member_use
-          padding: MaterialStateProperty.all<EdgeInsets>(
-            EdgeInsets.symmetric(
-              vertical: verticalpadding?.h ?? 16.h,
-              horizontal: horizontalpadding?.w ?? 16.w,
-            ),
-          ),
-          // ignore: deprecated_member_use
-          fixedSize: MaterialStateProperty.all(
-            Size(buttonWidth?.w ?? double.maxFinite, buttonHeight?.h ?? 16.h),
           ),
         ),
-        onPressed: onPressed,
-        child: Text(buttonText, style: textStyle),
+        // ignore: deprecated_member_use
+        backgroundColor: MaterialStatePropertyAll(
+          backgroundColor ?? AppColors.mainAppColor,
+        ),
+
+        // ignore: deprecated_member_use
+        padding: MaterialStateProperty.all<EdgeInsets>(
+          EdgeInsets.symmetric(
+            vertical: verticalpadding?.h ?? 16.h,
+            horizontal: horizontalpadding?.w ?? 16.w,
+          ),
+        ),
+        // ignore: deprecated_member_use
+        fixedSize: MaterialStateProperty.all(
+          Size(buttonWidth?.w ?? double.infinity, buttonHeight?.h ?? 16.h),
+        ),
       ),
+      onPressed: onPressed,
+      child: Text(buttonText, style: textStyle),
     );
   }
 }
