@@ -1,3 +1,5 @@
+import 'package:finance_ui/core/helpers/extension.dart';
+import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/core/theme/app_colors.dart';
 import 'package:finance_ui/core/theme/text_style.dart';
 import 'package:finance_ui/core/widgets/app_text_button.dart';
@@ -14,13 +16,13 @@ class RegisterButton extends StatelessWidget {
       child: AppTextButton(
         buttonWidth: 331.w,
         buttonHeight: 56.h,
-        
+
         buttonText: "Register",
         backgroundColor: Colors.white,
         textStyle: TextStyles.font15DarkBlueSemiBold,
         borderColor: AppColors.mainAppColor,
         borderWidth: 1.2,
-        onPressed: () {},
+        onPressed: () => context.pushNamed(Routes.registerPage),
       ),
     );
   }

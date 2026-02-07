@@ -1,5 +1,6 @@
 import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/feature/login/ui/login_page.dart';
+import 'package:finance_ui/feature/register/ui/register_page.dart';
 import 'package:finance_ui/feature/welcome/ui/welcome_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,9 @@ class AppRouter {
 
       case Routes.loginPage:
         return MaterialPageRoute(builder: (_) => const LoginPage());
+
+      case Routes.registerPage:
+        return MaterialPageRoute(builder: (_) => const RegisterPage());
 
       default:
         return null;
