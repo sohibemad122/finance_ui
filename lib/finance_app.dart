@@ -27,8 +27,9 @@ class FinanceApp extends StatelessWidget {
                 statusBarColor: Colors.transparent,
                 statusBarIconBrightness: Brightness.dark,
 
-                systemNavigationBarColor: Colors.transparent,
-                systemNavigationBarIconBrightness: Brightness.light,
+                systemNavigationBarColor: Colors.white,
+                systemNavigationBarIconBrightness: Brightness.dark,
+                systemNavigationBarContrastEnforced: true,
               ),
             );
 

@@ -1,4 +1,6 @@
+import 'package:finance_ui/core/helpers/extension.dart';
 import 'package:finance_ui/core/helpers/spacing.dart';
+import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/core/theme/text_style.dart';
 import 'package:finance_ui/core/widgets/app_text_button.dart';
 import 'package:finance_ui/core/widgets/dont_have_account_and_already_have_account.dart';
@@ -34,9 +36,9 @@ class OtpVerification extends StatelessWidget {
               child: AppTextButton(
                 buttonWidth: 331.w,
                 buttonHeight: 56.h,
-                buttonText: 'Verification',
+                buttonText: 'Verify',
                 textStyle: TextStyles.font15whiteSemiBold,
-                onPressed: () {},
+                onPressed: () => context.pushNamed(Routes.createNewPassword),
               ),
             ),
             verticalSpace(50),
