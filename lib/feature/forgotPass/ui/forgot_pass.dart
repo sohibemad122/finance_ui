@@ -44,7 +44,7 @@ class ForgotPass extends StatelessWidget {
                 buttonHeight: 56.h,
                 buttonText: 'Send Code',
                 textStyle: TextStyles.font15whiteSemiBold,
-                onPressed: () => context.pushNamed(Routes.OtpVerificationPage),
+                onPressed: () => context.pushNamed(Routes.otpVerificationPage),
               ),
             ),
             verticalSpace(30),
