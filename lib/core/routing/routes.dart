@@ -3,4 +3,6 @@ class Routes {
   static const String loginPage = '/loginPage';
   static const String registerPage = '/registerPage';
   static const String forgotPassPage = '/forgotPassPage';
+  static const String otpVerificationPage = '/otpVerification';
+  static const String createNewPassword = '/createNewPassword';
 }

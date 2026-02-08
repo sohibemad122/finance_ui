@@ -12,6 +12,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: AppColors.white,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -21,13 +22,13 @@ class WelcomePage extends StatelessWidget {
                 'assets/images/generated.png',
                 fit: BoxFit.fill,
                 width: double.infinity,
-                height: 570.h,
+                height: 540.h,
               ),
               verticalSpace(21),
               const LoginButton(),
-              verticalSpace(21),
+              verticalSpace(20),
               const RegisterButton(),
-              verticalSpace(30),
+              verticalSpace(25),
               const ContinueAsAGuest(),
             ],
           ),

@@ -9,7 +9,7 @@ class AppTextFormField extends StatelessWidget {
   final InputBorder? enabledBorder;
   final TextStyle? inputTextStyle;
   final TextStyle? hintStyle;
-  final String hinttext;
+  final String? hinttext;
   final bool? isObscureText;
   final Widget? suffixIcon;
   final TextEditingController? controller;
@@ -21,7 +21,7 @@ class AppTextFormField extends StatelessWidget {
     this.enabledBorder,
     this.inputTextStyle,
     this.hintStyle,
-    required this.hinttext,
+     this.hinttext,
     this.isObscureText,
     this.suffixIcon,
     this.controller,

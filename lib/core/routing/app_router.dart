@@ -1,4 +1,6 @@
 import 'package:finance_ui/core/routing/routes.dart';
+import 'package:finance_ui/feature/CreateNewPassword/ui/create_new_password.dart';
+import 'package:finance_ui/feature/forgotPass/ui/otp_verification.dart';
 import 'package:finance_ui/feature/forgotPass/ui/forgot_pass.dart';
 import 'package:finance_ui/feature/login/ui/login_page.dart';
 import 'package:finance_ui/feature/register/ui/register_page.dart';
@@ -19,6 +21,12 @@ class AppRouter {
 
       case Routes.forgotPassPage:
         return MaterialPageRoute(builder: (_) => const ForgotPass());
+
+      case Routes.otpVerificationPage:
+        return MaterialPageRoute(builder: (_) => const OtpVerification());
+
+      case Routes.createNewPassword:
+        return MaterialPageRoute(builder: (_) => const CreateNewPassword());
 
       default:
         return null;
