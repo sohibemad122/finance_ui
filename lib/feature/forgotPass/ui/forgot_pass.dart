@@ -44,10 +44,15 @@ class ForgotPass extends StatelessWidget {
                 buttonHeight: 56.h,
                 buttonText: 'Send Code',
                 textStyle: TextStyles.font15whiteSemiBold,
-                onPressed: () => context.pushNamed(Routes.otpVerificationPage),
+                onPressed: () => context.pushNamedAndRemoveUntil(
+                  Routes.otpVerificationPage,
+                  predicate: (Route<dynamic> route) {
+                    return false;
+                  },
+                ),
               ),
             ),
-            verticalSpace(30),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -58,6 +63,7 @@ class ForgotPass extends StatelessWidget {
                 ),
               ],
             ),
+            verticalSpace(30),
           ],
         ),
       ),

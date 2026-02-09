@@ -9,4 +9,8 @@ class AppColors {
   static Color lightWhite2 = Color(0xffF7F8F9);
   static Color gray = Color(0xff8391A1);
   static Color darkGray = Color(0xff6A707C);
+  static Color neutral10 = Color(0xffFDFDFD);
+  static Color neutral60 = Color(0xff9CA4AB);
+  static Color neutral30 = Color(0xffE3E9ED);
+  static Color neutral100 = Color(0xff1F2C37);
 }

@@ -6,4 +6,5 @@ class Routes {
   static const String otpVerificationPage = '/otpVerification';
   static const String createNewPassword = '/createNewPassword';
   static const String passChangePage = '/passChangePage';
+  static const String homePage = '/homePage';
 }

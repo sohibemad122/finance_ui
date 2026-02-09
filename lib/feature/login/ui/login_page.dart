@@ -32,7 +32,12 @@ class LoginPage extends StatelessWidget {
                   buttonWidth: 331.w,
                   buttonText: 'Login',
                   textStyle: TextStyles.font15whiteSemiBold,
-                  onPressed: () {},
+                  onPressed: () => context.pushNamedAndRemoveUntil(
+                    Routes.homePage,
+                    predicate: (Route<dynamic> route) {
+                      return false;
+                    },
+                  ),
                 ),
               ),
               verticalSpace(30),

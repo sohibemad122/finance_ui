@@ -27,7 +27,12 @@ class TextFormFieldCustom extends StatelessWidget {
             children: [
               Spacer(),
               GestureDetector(
-                onTap: () => context.pushNamed(Routes.forgotPassPage),
+                onTap: () => context.pushNamedAndRemoveUntil(
+                  Routes.forgotPassPage,
+                  predicate: (Route<dynamic> route) {
+                    return false;
+                  },
+                ),
                 child: Text(
                   'Forgot password?',
                   style: TextStyles.font14DarkGraySemiBold,

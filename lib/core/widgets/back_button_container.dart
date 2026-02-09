@@ -1,4 +1,5 @@
 import 'package:finance_ui/core/helpers/extension.dart';
+import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,7 +11,7 @@ class BackButtonContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(10),
-      onTap: () => context.pop(),
+      onTap: () => context.pushNamed(Routes.loginPage),
       child: Container(
         height: 41.h,
         width: 41.w,

@@ -3,6 +3,7 @@ import 'package:finance_ui/feature/CreateNewPassword/ui/create_new_password.dart
 import 'package:finance_ui/feature/CreateNewPassword/ui/pass_change_page.dart';
 import 'package:finance_ui/feature/forgotPass/ui/otp_verification.dart';
 import 'package:finance_ui/feature/forgotPass/ui/forgot_pass.dart';
+import 'package:finance_ui/feature/home/ui/home_page.dart';
 import 'package:finance_ui/feature/login/ui/login_page.dart';
 import 'package:finance_ui/feature/register/ui/register_page.dart';
 import 'package:finance_ui/feature/welcome/ui/welcome_page.dart';
@@ -32,6 +33,8 @@ class AppRouter {
       case Routes.passChangePage:
         return MaterialPageRoute(builder: (_) => const PassChangePage());
 
+      case Routes.homePage:
+        return MaterialPageRoute(builder: (_) => const HomePage());
       default:
         return null;
     }
