@@ -1,6 +1,6 @@
 import 'package:finance_ui/core/helpers/extension.dart';
 import 'package:finance_ui/core/helpers/spacing.dart';
-import 'package:finance_ui/core/routing/routes.dart';
+import 'package:finance_ui/core/theme/routes.dart';
 import 'package:finance_ui/core/widgets/dont_have_account_and_already_have_account.dart';
 import 'package:finance_ui/core/widgets/welcome_text.dart';
 import 'package:finance_ui/feature/register/ui/widget/text_form_field_custom_register.dart';

@@ -29,13 +29,14 @@ class TopbarHome extends StatelessWidget {
       height: 50.h,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(25),
+        shape: BoxShape.circle,
         border: Border.all(color: Colors.grey.shade300),
       ),
-      child: Image.asset(
-        'assets/images/facebook.png',
-        width: 24.w,
-        height: 24.h,
+      child: ClipOval(
+        child: Image.asset(
+          'assets/images/sohib.png',
+          fit: BoxFit.cover, // 👈 أهم سطر
+        ),
       ),
     );
   }

@@ -11,6 +11,12 @@ class TextStyles {
     color: Colors.white,
     fontWeight: FontWeightHelper.semibold,
   );
+  static TextStyle font16whiteMedium = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 16.sp,
+    color: Colors.white,
+    fontWeight: FontWeightHelper.medium,
+  );
 
   static TextStyle font15DarkBlueSemiBold = TextStyle(
     fontFamily: AppFonts.mainFontName,
@@ -78,6 +84,19 @@ class TextStyles {
     color: AppColors.neutral100,
     fontWeight: FontWeightHelper.medium,
   );
+  static TextStyle font12neutral0bold = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 12.sp,
+    color: AppColors.neutral10,
+    fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle font14neutral0medium = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 14.sp,
+    color: AppColors.neutral10,
+    fontWeight: FontWeightHelper.medium,
+  );
 
   static TextStyle font18neutral100semibold = TextStyle(
     fontFamily: AppFonts.mainFontName,
@@ -90,5 +109,19 @@ class TextStyles {
     fontSize: 22.sp,
     color: AppColors.mainAppColor,
     fontWeight: FontWeightHelper.bold,
+  );
+
+  static TextStyle font24whitesemibold = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 24.sp,
+    color: Colors.white,
+    fontWeight: FontWeightHelper.semibold,
+  );
+
+  static TextStyle font16Neutral100SemiBold = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 16.sp,
+    color: AppColors.neutral100,
+    fontWeight: FontWeightHelper.semibold,
   );
 }

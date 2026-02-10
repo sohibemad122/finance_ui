@@ -1,6 +1,6 @@
 import 'package:finance_ui/core/helpers/extension.dart';
 import 'package:finance_ui/core/helpers/spacing.dart';
-import 'package:finance_ui/core/routing/routes.dart';
+import 'package:finance_ui/core/theme/routes.dart';
 import 'package:finance_ui/core/theme/text_style.dart';
 import 'package:finance_ui/core/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';

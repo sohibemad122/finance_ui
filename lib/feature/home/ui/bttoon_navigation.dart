@@ -1,5 +1,9 @@
 import 'package:finance_ui/core/theme/app_colors.dart';
+import 'package:finance_ui/feature/home/ui/add_card.dart';
 import 'package:finance_ui/feature/home/ui/home_screen.dart';
+import 'package:finance_ui/feature/home/ui/my_card.dart';
+import 'package:finance_ui/feature/home/ui/profile.dart';
+import 'package:finance_ui/feature/home/ui/statistic_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,10 +27,10 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
   List<Widget> _buildScreens() {
     return [
       const HomeScreen(),
-      Container(color: Colors.red),
-      Container(color: Colors.green),
-      Container(color: Colors.blue),
-      Container(color: Colors.yellow),
+      const StatisticScreen(),
+      const AddCard(),
+      const MyCard(),
+      const Profile(),
     ];
   }
 

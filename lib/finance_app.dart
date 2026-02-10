@@ -1,5 +1,5 @@
 import 'package:finance_ui/core/routing/app_router.dart';
-import 'package:finance_ui/core/routing/routes.dart';
+import 'package:finance_ui/core/theme/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

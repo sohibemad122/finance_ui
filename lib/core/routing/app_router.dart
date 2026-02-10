@@ -1,4 +1,4 @@
-import 'package:finance_ui/core/routing/routes.dart';
+import 'package:finance_ui/core/theme/routes.dart';
 import 'package:finance_ui/feature/CreateNewPassword/ui/create_new_password.dart';
 import 'package:finance_ui/feature/CreateNewPassword/ui/pass_change_page.dart';
 import 'package:finance_ui/feature/forgotPass/ui/otp_verification.dart';

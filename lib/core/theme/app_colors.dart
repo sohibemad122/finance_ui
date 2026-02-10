@@ -13,4 +13,6 @@ class AppColors {
   static Color neutral60 = Color(0xff9CA4AB);
   static Color neutral30 = Color(0xffE3E9ED);
   static Color neutral100 = Color(0xff1F2C37);
+  static Color darkPurple = Color(0xff4151A6);
+  static Color neutral20 = Color(0xffECF1F6);
 }
