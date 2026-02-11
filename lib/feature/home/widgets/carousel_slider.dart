@@ -20,7 +20,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
     CardItem(
       cardName: 'Z-Card',
       cardTypeImage: 'assets/images/Group 3.png',
-      balance: '5000 EG',
+      balance: '5,000 EG',
       cardNumber: '****  9012',
       expiryDate: '05/24',
     ),

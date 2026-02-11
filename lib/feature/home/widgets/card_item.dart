@@ -11,6 +11,8 @@ class CardItem extends StatelessWidget {
   final String? expiryDate;
   final String? cardTypeImage;
   final Color? backgroundColor;
+  final double? height;
+  final double? weight;
 
   const CardItem({
     super.key,
@@ -20,13 +22,15 @@ class CardItem extends StatelessWidget {
     this.expiryDate,
     this.cardTypeImage,
     this.backgroundColor,
+    this.height,
+    this.weight,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 207.w,
-      height: 263.h,
+      width: weight ?? 207.w,
+      height: height ?? 263.h,
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -64,7 +68,7 @@ class CardItem extends StatelessWidget {
                 Text('Balance', style: TextStyles.font14neutral0medium),
                 verticalSpace(10),
                 Text(
-                  balance ?? '23400 EG',
+                  balance ?? '23,400 EG',
                   style: TextStyles.font24whitesemibold,
                 ),
 
@@ -110,5 +114,4 @@ class CardItem extends StatelessWidget {
       ),
     );
   }
-
 }
