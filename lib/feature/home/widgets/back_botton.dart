@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BackBottonAndAppBar extends StatelessWidget {
-  const BackBottonAndAppBar({super.key});
+  final String? text;
+  final String? image;
+  const BackBottonAndAppBar({super.key, this.text, this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class BackBottonAndAppBar extends StatelessWidget {
           ),
         ),
 
-        Text('All Cards', style: TextStyles.font18neutral100semibold),
+        Text(text ?? 'All Cards', style: TextStyles.font18neutral100semibold),
 
         Container(
           height: 48.h,
@@ -42,10 +44,9 @@ class BackBottonAndAppBar extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: Icon(
-              Icons.more_horiz,
-              size: 24.sp,
-              weight: 24.w,
+            child: Image.asset(
+              image ?? 'assets/images/more (5) 1.png',
+              width: 24.w,
               color: AppColors.neutral100,
             ),
           ),

@@ -97,6 +97,12 @@ class TextStyles {
     color: AppColors.neutral10,
     fontWeight: FontWeightHelper.medium,
   );
+  static TextStyle font14neutral60medium = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 14.sp,
+    color: AppColors.neutral60,
+    fontWeight: FontWeightHelper.medium,
+  );
 
   static TextStyle font18neutral100semibold = TextStyle(
     fontFamily: AppFonts.mainFontName,
