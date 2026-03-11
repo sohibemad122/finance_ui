@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class TextStyles {
   static TextStyle font15whiteSemiBold = TextStyle(
     fontFamily: AppFonts.mainFontName,
-    fontSize: 16.sp,
+    fontSize: 19.sp,
     color: Colors.white,
     fontWeight: FontWeightHelper.semibold,
   );

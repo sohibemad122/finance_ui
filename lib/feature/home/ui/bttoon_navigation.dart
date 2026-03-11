@@ -1,4 +1,5 @@
 import 'package:finance_ui/core/theme/app_colors.dart';
+import 'package:finance_ui/feature/home/logic/cubit/home_cubit.dart';
 import 'package:finance_ui/feature/home/ui/add_card.dart';
 import 'package:finance_ui/feature/home/ui/home_screen.dart';
 import 'package:finance_ui/feature/home/ui/my_card.dart';
@@ -6,6 +7,7 @@ import 'package:finance_ui/feature/home/ui/profile.dart';
 import 'package:finance_ui/feature/home/ui/statistic_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
@@ -30,7 +32,7 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
       const StatisticScreen(),
       const AddCard(),
       const MyCard(),
-      const Profile(),
+      BlocProvider(create: (context) => HomeCubit(), child: const Profile()),
     ];
   }
 
@@ -87,7 +89,7 @@ class _CustomBottomNavbarState extends State<CustomBottomNavbar> {
                 child: Icon(
                   CupertinoIcons.plus,
                   size: 18.w,
-                  color: AppColors.mainAppColor, // لون +
+                  color: AppColors.mainAppColor,
                 ),
               ),
             ),

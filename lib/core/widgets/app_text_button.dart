@@ -10,11 +10,11 @@ class AppTextButton extends StatelessWidget {
   final double? horizontalpadding;
   final double? verticalpadding;
   final double? buttonWidth;
-  final double? fontsize;
   final double? buttonHeight;
   final String buttonText;
   final TextStyle textStyle;
   final VoidCallback onPressed;
+
   const AppTextButton({
     super.key,
     this.borderRadius,
@@ -25,7 +25,6 @@ class AppTextButton extends StatelessWidget {
     this.verticalpadding,
     this.buttonWidth,
     this.buttonHeight,
-    this.fontsize,
     required this.buttonText,
     required this.textStyle,
     required this.onPressed,
@@ -35,35 +34,35 @@ class AppTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: ButtonStyle(
-        // ignore: deprecated_member_use
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        backgroundColor: WidgetStateProperty.all(
+          backgroundColor ?? AppColors.mainAppColor,
+        ),
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 8),
+            borderRadius: BorderRadius.circular((borderRadius ?? 8).r),
             side: BorderSide(
               color: borderColor ?? Colors.transparent,
               width: borderWidth ?? 1,
             ),
           ),
         ),
-        // ignore: deprecated_member_use
-        backgroundColor: MaterialStatePropertyAll(
-          backgroundColor ?? AppColors.mainAppColor,
-        ),
-
-        // ignore: deprecated_member_use
-        padding: MaterialStateProperty.all<EdgeInsets>(
+        padding: WidgetStateProperty.all(
           EdgeInsets.symmetric(
             vertical: verticalpadding?.h ?? 16.h,
             horizontal: horizontalpadding?.w ?? 16.w,
           ),
         ),
-        // ignore: deprecated_member_use
-        fixedSize: MaterialStateProperty.all(
-          Size(buttonWidth?.w ?? double.infinity, buttonHeight?.h ?? 16.h),
-        ),
+        fixedSize: buttonWidth != null && buttonHeight != null
+            ? WidgetStateProperty.all(
+                Size(buttonWidth!.w, buttonHeight!.h),
+              )
+            : null,
       ),
       onPressed: onPressed,
-      child: Text(buttonText, style: textStyle),
+      child: Text(
+        buttonText,
+        style: textStyle.copyWith(fontSize: textStyle.fontSize?.sp),
+      ),
     );
   }
 }

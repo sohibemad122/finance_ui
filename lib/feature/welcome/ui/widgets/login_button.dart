@@ -1,5 +1,5 @@
 import 'package:finance_ui/core/helpers/extension.dart';
-import 'package:finance_ui/core/theme/routes.dart';
+import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/core/theme/text_style.dart';
 import 'package:finance_ui/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
@@ -11,10 +11,10 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22.0),
+      padding: EdgeInsets.symmetric(horizontal: 22.0.w),
       child: AppTextButton(
-        buttonWidth: 331.w,
-        buttonHeight: 56.h,
+        buttonWidth: 331,
+        buttonHeight: 70,
         buttonText: "Login",
         textStyle: TextStyles.font15whiteSemiBold,
         onPressed: () => context.pushNamed(Routes.loginPage),
