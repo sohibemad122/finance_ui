@@ -1,5 +1,6 @@
 import 'package:finance_ui/core/routing/app_router.dart';
-import 'package:finance_ui/core/theme/routes.dart';
+import 'package:finance_ui/core/routing/routes.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,29 +11,28 @@ class FinanceApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
+    final initialRoute = user != null ? Routes.homePage : Routes.loginPage;
+
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(375, 800),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (_, child) {
+      builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Finance App',
-          initialRoute: Routes.welcomePage,
+          initialRoute: initialRoute,
           onGenerateRoute: appRouter.generateRoute,
-
           builder: (context, child) {
             SystemChrome.setSystemUIOverlayStyle(
               const SystemUiOverlayStyle(
                 statusBarColor: Colors.transparent,
                 statusBarIconBrightness: Brightness.dark,
-
                 systemNavigationBarColor: Colors.white,
                 systemNavigationBarIconBrightness: Brightness.dark,
-                systemNavigationBarContrastEnforced: true,
               ),
             );
-
             return child!;
           },
         );

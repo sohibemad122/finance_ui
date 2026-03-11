@@ -1,6 +1,6 @@
 import 'package:finance_ui/core/helpers/extension.dart';
 import 'package:finance_ui/core/helpers/spacing.dart';
-import 'package:finance_ui/core/theme/routes.dart';
+import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/core/theme/text_style.dart';
 import 'package:finance_ui/core/widgets/app_text_button.dart';
 import 'package:finance_ui/core/widgets/app_text_form_field.dart';
@@ -35,7 +35,9 @@ class CreateNewPassword extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: AppTextFormField(
-                validator: (value) {},
+                validator: (value) {
+                  return null;
+                },
                 hinttext: 'New password',
               ),
             ),
@@ -43,7 +45,9 @@ class CreateNewPassword extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: AppTextFormField(
-                validator: (value) {},
+                validator: (value) {
+                  return null;
+                },
                 hinttext: 'Confirm password',
               ),
             ),
